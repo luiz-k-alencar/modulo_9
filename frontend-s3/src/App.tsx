@@ -77,53 +77,104 @@ function App() {
             <li>
               <p>{survey[questionIndex].question1.title}</p>
               <ul className={styles.buttonsList}>
-                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
-                  <li key={item + survey[questionIndex].question1.title}>
-                    <button
-                      type="button"
-                      className={
-                        survey[questionIndex].question1.answer === item
-                          ? styles.rangeBtnActive
-                          : ""
-                      }
-                      onClick={() => {
-                        setSurvey((prevSurvey) => {
-                          const newSurvey = [...prevSurvey];
-                          newSurvey[questionIndex].question1.answer = item;
-                          return newSurvey;
-                        });
-                      }}
-                    >
-                      {item}
-                    </button>
-                  </li>
-                ))}
+                <div>
+                  {[1, 2, 3, 4, 5].map((item) => (
+                    <li key={item + survey[questionIndex].question1.title}>
+                      <button
+                        type="button"
+                        className={
+                          survey[questionIndex].question1.answer === item
+                            ? styles.rangeBtnActive
+                            : ""
+                        }
+                        onClick={() => {
+                          setSurvey((prevSurvey) => {
+                            const newSurvey = [...prevSurvey];
+                            newSurvey[questionIndex].question1.answer = item;
+                            return newSurvey;
+                          });
+                        }}
+                      >
+                        {item}
+                      </button>
+                    </li>
+                  ))}
+                </div>
+
+                <div>
+                  {[6, 7, 8, 9, 10].map((item) => (
+                    <li key={item + survey[questionIndex].question1.title}>
+                      <button
+                        type="button"
+                        className={
+                          survey[questionIndex].question1.answer === item
+                            ? styles.rangeBtnActive
+                            : ""
+                        }
+                        onClick={() => {
+                          setSurvey((prevSurvey) => {
+                            const newSurvey = [...prevSurvey];
+                            newSurvey[questionIndex].question1.answer = item;
+                            return newSurvey;
+                          });
+                        }}
+                      >
+                        {item}
+                      </button>
+                    </li>
+                  ))}
+                </div>
               </ul>
             </li>
             <li>
               <p>{survey[questionIndex].question2.title}</p>
               <ul className={styles.buttonsList}>
-                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
-                  <li key={item + survey[questionIndex].question2.title}>
-                    <button
-                      type="button"
-                      className={
-                        survey[questionIndex].question2.answer === item
-                          ? styles.rangeBtnActive
-                          : ""
-                      }
-                      onClick={() => {
-                        setSurvey((prevSurvey) => {
-                          const newSurvey = [...prevSurvey];
-                          newSurvey[questionIndex].question2.answer = item;
-                          return newSurvey;
-                        });
-                      }}
-                    >
-                      {item}
-                    </button>
-                  </li>
-                ))}
+                <div>
+                  {[1, 2, 3, 4, 5].map((item) => (
+                    <li key={item + survey[questionIndex].question2.title}>
+                      <button
+                        type="button"
+                        className={
+                          survey[questionIndex].question2.answer === item
+                            ? styles.rangeBtnActive
+                            : ""
+                        }
+                        onClick={() => {
+                          setSurvey((prevSurvey) => {
+                            const newSurvey = [...prevSurvey];
+                            newSurvey[questionIndex].question2.answer = item;
+                            return newSurvey;
+                          });
+                        }}
+                      >
+                        {item}
+                      </button>
+                    </li>
+                  ))}
+                </div>
+                <div>
+                  {[6, 7, 8, 9, 10].map((item) => (
+                    <li key={item + survey[questionIndex].question2.title}>
+                      <button
+                        type="button"
+                        className={
+                          survey[questionIndex].question2.answer === item
+                            ? styles.rangeBtnActive
+                            : ""
+                        }
+                        onClick={() => {
+                          setSurvey((prevSurvey) => {
+                            const newSurvey = [...prevSurvey];
+                            newSurvey[questionIndex].question2.answer = item;
+                            return newSurvey;
+                          });
+                        }}
+                      >
+                        {item}
+                      </button>
+                    </li>
+                  ))}
+                </div>
               </ul>
             </li>
           </ul>
